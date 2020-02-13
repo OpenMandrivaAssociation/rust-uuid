@@ -1,0 +1,29 @@
+--- uuid-0.8.1/Cargo.toml	1970-01-01T00:00:00+00:00
++++ uuid-0.8.1/Cargo.toml	2020-01-16T22:06:38.036466+00:00
+@@ -31,7 +31,7 @@
+ [package.metadata.playground]
+ features = ["serde", "v1", "v3", "v4", "v5"]
+ [dependencies.md5]
+-version = "0.6"
++version = "0.7"
+ optional = true
+ 
+ [dependencies.rand]
+@@ -65,17 +65,11 @@
+ 
+ [features]
+ default = ["std"]
+-guid = ["winapi"]
+ std = []
+-stdweb = ["rand/stdweb"]
+ v1 = []
+ v3 = ["md5"]
+ v4 = ["rand"]
+ v5 = ["sha1"]
+-wasm-bindgen = ["rand/wasm-bindgen"]
+-[target."cfg(windows)".dependencies.winapi]
+-version = "0.3"
+-optional = true
+ [badges.appveyor]
+ repository = "uuid-rs/uuid"
+ 
